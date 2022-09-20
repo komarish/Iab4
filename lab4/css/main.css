@@ -1,0 +1,387 @@
+/*расположили на весь экран, потому что захотели, 
+чтобы вся информация была на мониторе сразу*/
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font: normal normal 1em Verdana, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;	
+}
+
+div {
+	/*outline: 1px solid red;*/
+}
+
+header {
+	height: 120px;
+	padding: 1em;
+	padding-right: 100px;
+	background-color: #ffffff;
+	background-image: url(../img/hdr3.jpg);
+	background-repeat: repeat;
+	background-position: center right;
+	background-size: contain;
+	text-align: center;
+}
+
+/*фиолетовая полосочка, на которой подпись*/
+header > div {
+	display: inline-block;
+	width: calc(80% - 51px - 113px);
+	height: 100px;
+	background: transparent url(../img/images/panel_inf_1_02.png) repeat-x left center;
+	text-align: center;
+}
+
+header > div > div:nth-child(1) {
+	width: 51px;
+	height: 100px;
+	background: transparent url(../img/images/panel_inf_1_01.png) no-repeat left center;
+	margin-left: -51px;
+	float:left;
+}
+header > div > div:nth-child(3) {
+	width: 113px;
+	height: 100px;
+	background: transparent url(../img/images/panel_inf_1_03.png) no-repeat left center;
+	margin-right: -113px;
+	float: right;
+}
+
+/*Заголовок с названием сервиса*/
+header h1 {
+	display: inline-block;
+	padding: .85em 0 0 0;
+	font: normal normal 2em Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-style: oblique;
+	font-stretch: semi-condensed;
+	/*color: rgba(37,27,77,1.00);*/
+	color: white;
+	/*
+	text-shadow: 1px 1px rgba(188,168,102,.8), 1px -1px rgba(188,168,102,.8), -1px 1px rgba(188,168,102,.8), -1px -1px rgba(188,168,102,.8), 3px 3px 6px rgba(188,168,102,.8);
+	*/
+
+}
+
+/*Объяснение происходящего на странице, которое сейчас отсутствует*/
+header > p {
+	font: italic normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	background-color: rgba(255,234,166,0.76);
+	color: #000000;
+	margin-top: .25em;
+	padding: .25em;
+	border-radius: .25em;
+}
+
+/*Подвал*/
+footer {
+	height: 80px;
+	padding: 2em;
+	color: #ffffff;
+	background-color: rgba(85,72,139,1);
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	text-align: right;
+}
+
+
+/*Сслыки (у названий рецептов) с выключенным подчеркиванием*/
+a {
+	text-decoration: none;
+}
+
+/*Панель - то, что между шапкой и подвалом*/
+#pnl {
+	height: calc(100vh - 120px - 80px);
+}
+
+/*Левая панель*/
+#lp {
+	width: 20%;
+	height: 100%;
+	float: left;
+	border: 1px solid #cccccc;
+}
+
+#lp > div:nth-child(1) {
+	padding: 1em 1em;
+	height: 80px;
+}
+
+#lp > div:nth-child(1) > form:nth-child(1) > input {
+	width: calc(70%);
+	padding: .5em;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#lp > div:nth-child(1) > form:nth-child(1) > button {
+	width: auto;
+	padding: .5em;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	background-color: rgba(183,201,153,1);
+}
+
+#lp > div:nth-child(2) {
+	height: calc(100% - 80px - 80px);
+	padding: 1em;
+}
+
+#lp > div:nth-child(2) > ul {
+	list-style-type: none;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#lp > div:nth-child(3) {
+	height: 80px;
+	padding: 1em;
+}
+
+#lp > div:nth-child(3) > button {
+	padding: .5em;
+	text-align: center;
+	width: calc(100%);
+	background-color: rgba(255,234,166,1);
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+/*Правая панель*/
+#rp {
+	width: 80%;
+	height: 100%;
+	border: 1px solid #cccccc;
+	float: right;
+	overflow: auto;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	text-align: center;
+}
+
+#rp ul {
+	list-style-type: none;
+}
+
+#rp h3 {
+	margin: 1em;
+}
+
+#rp p {
+	text-decoration: underline;
+}
+
+#rp > h2 {
+	text-align: center;
+	font: normal normal 1.5em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#rp > form > div:nth-child(1) {
+	text-align: center;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#rp > form > div:nth-child(1) > div {
+	display: inline-block;
+	padding: .5em  .5em  .5em  .5em;
+}
+
+#rp > form > div:nth-child(2) > div:nth-child(1) {
+	text-align: center;
+	padding: .5em  0  .5em  0;
+}
+
+#rp > form:nth-child(2) > div:nth-child(1) > div:nth-child(1) > label > input {
+	margin: .5em;
+}
+
+#rp > form:nth-child(2) > div:nth-child(1) > div:nth-child(2) > label > input {
+	margin: .5em;
+}
+
+#rp > form > div:nth-child(2) > div:nth-child(1) > input[type="text"] {
+	width: 50%;
+	padding: .5em;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#rp > form > div:nth-child(2) > div:nth-child(1) > button {
+	padding: .5em;
+	background-color: rgba(183,201,153,1);
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+/*Таблица масел*/
+#volattable {
+	width: 80%;
+	margin: 1em auto;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#volattable > caption {
+	padding: .5em;
+	font: normal normal 1.2em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+ #volattable th {
+	padding: 5px;
+	border: 1px solid #dddddd;
+	background: #efefef;
+	font: normal normal 1.2em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-weight: normal;
+   }
+
+ #volattable td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+	 vertical-align: top;
+   }
+
+
+/*Форма для отправки рецепта на сервер*/
+#recipeform {
+	width: 100%; 
+	height: 100%;
+	top: 0;
+	position: absolute;   
+	left: 0;   
+	right: 0;   
+	margin-left: auto;   
+	margin-right: auto;   
+	background-color: rgba(159,125,220,0.79);
+}
+
+#recipeform > form {
+	width: 60%;
+	height: 60%;
+	margin: auto;
+	padding: 1em;
+	background: rgba(154,120,200,1);
+	text-align: center;
+	overflow: auto;
+}
+
+
+#recipeform > form > p {
+	font: normal normal 1.5em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color: rgba(255,234,166,1);
+}
+
+#recipeform > form > table {
+	width: 80%;
+	margin: 1em auto;
+	margin-bottom: 20px;
+	/*border: 1px solid #dddddd;*/
+	border-collapse: collapse; 
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color: #dddddd;
+}
+
+
+
+#recipeform > form > table th{
+	padding: 5px;
+	/*border: 1px solid #dddddd;*/
+	background: #efefef;
+	font: normal normal 1.2em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	font-weight: normal;
+}
+
+
+#recipeform > form > table td{
+	/*border: 1px solid #dddddd;*/
+	padding: 5px;
+}
+#recipeform > form input[type="text"] {
+	padding: .5em;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	width: 100%;
+}
+#recipeform > form input[type="number"] {
+	padding: .5em;
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	width: 5em;
+}
+#recipeform > form > input {
+	width: 100%;
+}
+#recipeform > form button[type="submit"] {
+	padding: .5em;
+    background-color: rgba(255,234,166,1);
+    font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+#recipeform > form button[type="button"] {
+	padding: .5em 1em;
+    background-color: rgba(183,201,153,1);
+    font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+
+/*Кнопка вернуться*/
+#recipeform > button {
+	padding: .5em;
+	background-color: rgba(255,234,166,1);
+	font: normal normal 1em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+
+/*Этого уже нет*/
+#recipeform > form:nth-child(2) > h2 {
+	font: normal normal 1.5em Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color: rgba(255,234,166,1);
+	top: 10%;
+}
+
+
+/*Классы разноцветных блоков для отображения 
+названий масел в таблице по группам*/
+div.g1 {
+	background-color: rgba(163,171,210,0.79);
+}
+
+div.g2 {
+	background-color: rgba(189,214,137,0.70);
+}
+
+div.g3 {
+	background-color: rgba(252,203,137,0.70);
+}
+
+
+div.g4 {
+	background-color: rgba(234,215,181,0.70);
+}
+
+
+div.g5 {
+	background-color: rgba(222,140,109,0.70);
+}
+
+div.g6 {
+	background-color: rgba(166,221,202,0.70);
+}
+
+
+div.g7 {
+	background-color: rgba(255,239,148,0.70);
+}
+
+div.g8 {
+	background-color: rgba(220,183,217,0.70);
+}
+
+div.hellodiv {
+	padding: 6em;
+}
+
+
+div.hellodiv p {
+	text-decoration: none !important;
+	text-align: center; 
+}
+
